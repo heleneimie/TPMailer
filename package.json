@@ -1,0 +1,19 @@
+{
+  "name": "tp_mailer",
+  "version": "1.0.0",
+  "description": "TP de mise en pratique du cours d'API REST : Création d'une application d'envoi de campagnes d'emailing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heleneimie/TPMailer.git"
+  },
+  "author": "Bastien, Hélène, Valentin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/heleneimie/TPMailer/issues"
+  },
+  "homepage": "https://github.com/heleneimie/TPMailer#readme"
+}
