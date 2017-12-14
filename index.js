@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 
-/* on simule une BDD avec des utilisateurs grâce à faker */
+/* on simule une BDD avec des contacts grâce à faker */
 for (let i = 0; i < 10; i++) {
     contacts.push({
         email:  faker.internet.email(),
