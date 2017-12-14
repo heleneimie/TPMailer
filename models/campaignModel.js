@@ -28,8 +28,9 @@ class CampaignModel {
                     //on rejette la promise
                     reject(error);
                 }
+                console.log(results[0].id);
                 //on la resolve
-                resolve(results);
+                resolve(results[0]);
             });
         });  
     };

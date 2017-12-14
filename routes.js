@@ -1,6 +1,7 @@
 'use strict';
 module.exports = function(app) {
   var campaign = require('./controllers/campaignController');
+  var user = require('./controllers/userController');
 
   const versionApi = '/api/v1';
 
@@ -13,6 +14,13 @@ module.exports = function(app) {
   app.route(`${versionApi}/campaigns/:campaignId`)
     .get(campaign.getByIdCampaign)
     .delete(campaign.deleteCampaign);
+
+  // User
+  app.route(`${versionApi}/users`)
+  .get(user.getAllUser);
+
+  app.route(`${versionApi}/users/:userEmail`)
+    .get(user.getByEmailUser);
 
     app.use((req, res, next) => {
       const err = new Error('Not Found');

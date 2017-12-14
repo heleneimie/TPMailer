@@ -2,8 +2,8 @@
 //Require dependencies
 const express = require("express");
 var bodyParser = require('body-parser');
-//var cors = require('cors');
-//var auth = require('./api/auth.js'); //Authentification by Token
+var cors = require('cors');
+var auth = require('./auth.js'); //Authentification by Token
 
 //Init app
 const app = express();
