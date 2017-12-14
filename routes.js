@@ -2,18 +2,24 @@
 module.exports = function(app) {
   var campaign = require('./controllers/campaignController');
   var user = require('./controllers/userController');
+  var send = require('./controllers/sendController');
 
-  const versionApi = '/api/v1';
 
-  // Campaigns
-  app.route(`${versionApi}/campaigns`)
-    .get(campaign.getAllCampaign)
-    .put(campaign.updateCampaign)
-    .post(campaign.createCampaign);
+    const versionApi = '/api/v1';
 
-  app.route(`${versionApi}/campaigns/:campaignId`)
-    .get(campaign.getByIdCampaign)
-    .delete(campaign.deleteCampaign);
+    // Campaigns
+    app.route(`${versionApi}/campaigns`)
+        .get(campaign.getAllCampaign)
+        .put(campaign.updateCampaign)
+        .post(campaign.createCampaign);
+
+    app.route(`${versionApi}/campaigns/:campaignId`)
+        .get(campaign.getByIdCampaign)
+        .delete(campaign.deleteCampaign);
+
+    //Sends
+    app.route(`${versionApi}/sends`)
+        .post(send.createSend);
 
   // User
   app.route(`${versionApi}/users`)
@@ -23,17 +29,17 @@ module.exports = function(app) {
     .get(user.getByEmailUser);
 
     app.use((req, res, next) => {
-      const err = new Error('Not Found');
-      err.status = 404;
-      next(err);
+        const err = new Error('Not Found');
+        err.status = 404;
+        next(err);
     });
-    
+
     app.use((err, req, res, next) => {
-      res.status(err.status || 500);
-      res.json({
-        error: {
-          message: err.message
-        }
-      });
+        res.status(err.status || 500);
+        res.json({
+            error: {
+                message: err.message
+            }
+        });
     });
 };

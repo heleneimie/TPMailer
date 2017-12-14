@@ -13,6 +13,7 @@ const campaignController = {
         // On utilise la fonction getAllCampaign() pour récupérer toutes les campagnes
         var campaignPromise = campaign.getAllCampaign(); 
 
+
         // On utilise les promises (retournés par la fonction) pour générer les cas d'erreur
         campaignPromise
         .then(function(results){
@@ -48,7 +49,6 @@ const campaignController = {
         let campaign = new Campaign('', req.body.name, req.body.subject, req.body.content, req.body.dateSend);
 
         var campaignPromise = campaign.createCampaign(); 
-
         campaignPromise
         .then(function(results){
             res.json(results);
@@ -61,7 +61,7 @@ const campaignController = {
 
         let campaign = new Campaign(req.body.id, req.body.name, req.body.subject, req.body.content, req.body.dateSend);
 
-        var ampaignPromise = campaign.updateCampaign(); 
+        var campaignPromise = campaign.updateCampaign();
 
         campaignPromise
         .then(function(results){

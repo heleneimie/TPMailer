@@ -134,5 +134,5 @@ class CampaignModel {
     };
 }
 
-module.exports = CampaignModel
+module.exports = CampaignModel;
 
