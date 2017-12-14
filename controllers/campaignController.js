@@ -11,7 +11,7 @@ const campaignController = {
         var campaign = new Campaign('', '', '', '', '');
 
         // On utilise la fonction getAllCampaign() pour récupérer toutes les campagnes
-        campaignPromise = campaign.getAllCampaign(); 
+        var campaignPromise = campaign.getAllCampaign();
 
         // On utilise les promises (retournés par la fonction) pour générer les cas d'erreur
         campaignPromise
@@ -32,7 +32,7 @@ const campaignController = {
         var campaign = new Campaign(campaignId, '', '', '', '');
 
         // On utilise la fonction getByIdCampaign() pour récupérer une campagne
-        campaignPromise = campaign.getByIdCampaign(); 
+        var campaignPromise = campaign.getByIdCampaign();
 
         // On utilise les promises (retournés par la fonction) pour générer les cas d'erreur
         campaignPromise
@@ -47,7 +47,7 @@ const campaignController = {
 
         let campaign = new Campaign('', req.body.name, req.body.subject, req.body.content, req.body.dateSend);
 
-        campaignPromise = campaign.createCampaign(); 
+        var campaignPromise = campaign.createCampaign();
 
         campaignPromise
         .then(function(results){
@@ -61,7 +61,7 @@ const campaignController = {
 
         let campaign = new Campaign(req.body.id, req.body.name, req.body.subject, req.body.content, req.body.dateSend);
 
-        campaignPromise = campaign.updateCampaign(); 
+        var campaignPromise = campaign.updateCampaign();
 
         campaignPromise
         .then(function(results){
@@ -77,7 +77,7 @@ const campaignController = {
 
         var campaign = new Campaign(campaignId, '', '', '', '');
     
-        campaignPromise = campaign.deleteCampaign(); 
+        var campaignPromise = campaign.deleteCampaign();
     
         campaignPromise
         .then(function(results){
