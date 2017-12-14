@@ -14,6 +14,9 @@ L'application Mailer permet de :
 L'utilisateur doit être authentifié pour utiliser ce service, avec un identifiant et un mot de passe.
 
 ## Installation du projet
+
+IMPORTANT - Si vous ne l'avez pas déjà installé, installer nodeJS (npm sera installé par défaut) : https://docs.npmjs.com/getting-started/installing-node
+
 - Cloner le projet
 - Dans un terminal, lancer la commande : ***npm install*** ; cette commande permettra d'installer tous les modules en dépendance du projet.
 
