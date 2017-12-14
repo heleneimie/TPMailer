@@ -1,3 +1,4 @@
+'use strict';
 //pour sauvegarder les messages en bdd
 const connection = require('./../database/db.js');
 

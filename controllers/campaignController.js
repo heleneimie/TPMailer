@@ -1,3 +1,4 @@
+'use strict';
 // Import du model pour les intéractions avec la base de données
 var Campaign = require('./../models/campaignModel.js');
 
