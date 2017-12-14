@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/heleneimie/TPMailer/issues"
   },
-  "homepage": "https://github.com/heleneimie/TPMailer#readme"
+  "homepage": "https://github.com/heleneimie/TPMailer#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "faker": "^4.1.0"
+  }
 }
