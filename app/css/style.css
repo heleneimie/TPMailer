@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+}
+
+/* css for timepicker */
+.ui-timepicker-div dl{ text-align: left; }
+.ui-timepicker-div dl dt{ height: 25px; }
+.ui-timepicker-div dl dd{ margin: -25px 0 10px 65px; }
+
+header {
+    margin-bottom: 50px;
+    box-shadow: -1px 2px 20px 1px rgba(0, 0, 0, 0.2); 
+}
+
+.navbar {
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo {
+    margin-right: 30px;
+}
+
+.navbar h1 {
+    margin-left: 20px;
+    color: #f1675f;
+}
+
+.app_head {
+    margin-bottom: 50px;
+}
+
+.app_head h2 {
+    text-align: center;
+    color: #f1675f;
+}
+
+button.fa-plus-circle:before {
+    margin-right: 10px;
+}
+
+#btn_add_campaigns {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+#btn_add_campaigns span {
+    font-family: calibri, sans-serif;
+}
+
+.campaign {
+    margin-bottom: 10px;
+}
+
+
+.campaign_header {
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding: 20px 0 20px 20px;
+    background: #fee0e1;
+    border-radius: 5px;
+}
+
+.campaign_header[] {
+
+}
+
+.campaign_header h5, .btn-group {
+    margin-right: 50px;
+}
+
+.btn-group {
+    position: absolute;
+    right: 0;
+}
+
+.btn-group button {
+    color: grey;
+}
+
+.btn-group button:hover {
+    color: #f1675f;
+}
+
+#btn_add_campaigns {
+    margin-bottom: 20px;
+}
+
+.campaign_title {
+    font-size: 1.5rem;
+}
+
+ a {
+    color: darkgrey;
+}
+
+.campaign_content {
+    margin-top: 20px;
+}
+
+.campaign_content form {
+    padding: 0 20px 20px 20px;
+}

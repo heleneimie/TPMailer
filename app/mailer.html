@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Normalize.css -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Bootstrap.css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+        crossorigin="anonymous">
+    <!-- Font Awsome.css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Markdown.css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+    <!-- Mon style.ccs et mon JS -->
+    <link rel="stylesheet" href="css/style.css">
+    </body>
+    <title>App Mailer</title>
+</head>
+
+<body>
+    <!-- Contener principal -->
+    <div class="container-fluid">
+        <!-- Entête de l'application -->
+        <header class="row">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <img src="logo.svg" alt="Logo mailer pro">
+                <h1>Mailer</h1>
+            </nav>
+        </header>
+        <!-- Section principale de l'application -->
+        <section class="row justify-content-xl-center">
+            <div class="col-xl-6">
+                <div class="app_head">
+                    <h2>Campaigns list</h2>
+                </div>
+                <!-- Boutton de création
+                <button type="button" class="btn btn-primary btn-lg btn-block fa fa-plus-circle" id="btn_add_campaigns">
+                    <span>add campaign</span>
+                </button> -->
+                <!-- Liste dépliante des campagnes -->
+                <div id="accordion" role="tablist" class="campaigns_list">
+                    <div class="card campaign primary">
+                        <div class="card-header campaign_header" role="tab" id="headingOne">
+                            <h5 class="mb-0 campaign_title">
+                                <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Créer une nouvelle campagne
+                                </a>
+                            </h5>
+                            <!--<div class="badge badge-danger campaign_status" role="alert">error</div>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-secondary btn_update fa fa-pencil"></button>
+                                <button type="button" class="btn btn-secondary btn_delete fa fa-trash"></button>
+                                <button type="button" class="btn btn-secondary btn_send fa fa-paper-plane"></button>
+                            </div>-->
+                        </div>
+                        <div id="collapseOne" class="collapse show campaign_content" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+                            <form action="" target="">
+                                <div class="form-group name">
+                                    <label for="name">Name</label>
+                                    <input type="text" name="name" class="form-control" placeholder="Enter a name">
+                                </div>
+                                <div class="form-group subject">
+                                    <label for="subject">Subject</label>
+                                    <input type="text" name="subject" class="form-control" placeholder="Enter a subject">
+                                </div>
+                                <div class="form-group dateSend">
+                                    <label for="dateSend">Send date</label>
+                                    <input type="date" name="dateSend" class="form-control" placeholder="Enter a date">
+                                </div>
+                                <div class="form-group content">
+                                    <label for="content">Content</label>
+                                    <textarea rows="4" cols="50" name="content" class="form-control" id="editor">
+                                    </textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Registed</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- jQuery & Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+    <script src="js/front.js"></script>
+    <!-- Start simple MDE -->
+    <script>
+        var simplemde = new SimpleMDE({
+            element: document.getElementById("editor")
+        });
+    </script>
+</body>
+
+</html>
