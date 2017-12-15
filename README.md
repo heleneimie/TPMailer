@@ -46,5 +46,7 @@ IMPORTANT - Si vous ne l'avez pas déjà installé, installer nodeJS (npm sera i
 - Dans un terminal, lancer la commande : ***node index.js***
 
 ## Identification sur l'API
+
 - Effectuer une requête en POST sur l'url : http://localhost:3000/api/v1/auth. Dans le body, chiffrer en x-www-form-urlencoded, envoyer { email : 'imie@imie.fr', password '123' }
 - Ajouter dans le header de vos futurs requêtes à l'API { x-access-token : 'votre_token_retourne_par_la_derniere_requete' }
+
