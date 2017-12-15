@@ -3,7 +3,7 @@
 const express = require("express");
 var bodyParser = require('body-parser');
 var cors = require('cors');
-var auth = require('./auth.js'); //Authentification by Token
+var auth = require('./controllers/authController.js'); //Authentification by Token
 
 //Init app
 const app = express();

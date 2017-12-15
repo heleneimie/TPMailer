@@ -4,22 +4,21 @@ module.exports = function(app) {
   var user = require('./controllers/userController');
   var send = require('./controllers/sendController');
 
+  const versionApi = '/api/v1';
 
-    const versionApi = '/api/v1';
+  // Campaigns
+  app.route(`${versionApi}/campaigns`)
+      .get(campaign.getAllCampaign)
+      .put(campaign.updateCampaign)
+      .post(campaign.createCampaign);
 
-    // Campaigns
-    app.route(`${versionApi}/campaigns`)
-        .get(campaign.getAllCampaign)
-        .put(campaign.updateCampaign)
-        .post(campaign.createCampaign);
+  app.route(`${versionApi}/campaigns/:campaignId`)
+      .get(campaign.getByIdCampaign)
+      .delete(campaign.deleteCampaign);
 
-    app.route(`${versionApi}/campaigns/:campaignId`)
-        .get(campaign.getByIdCampaign)
-        .delete(campaign.deleteCampaign);
-
-    //Sends
-    app.route(`${versionApi}/sends`)
-        .post(send.createSend);
+  //Sends
+  app.route(`${versionApi}/sends`)
+      .post(send.createSend);
 
   // User
   app.route(`${versionApi}/users`)

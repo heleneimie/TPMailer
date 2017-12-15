@@ -1,4 +1,4 @@
 .idea
 DS_Store
-node_modules/
-database/config.js
+api/node_modules/
+api/database/config.js

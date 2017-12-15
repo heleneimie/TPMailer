@@ -1,4 +1,4 @@
-var userModel = require('./models/userModel.js');
+var userModel = require('./../models/userModel.js');
 var jwt = require('jwt-simple');
 
 module.exports = function(req, res, next) {
