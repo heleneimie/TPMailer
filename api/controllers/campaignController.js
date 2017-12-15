@@ -2,7 +2,6 @@
 // Import du model pour les intéractions avec la base de données
 var Campaign = require('./../models/campaignModel.js');
 
-
 const campaignController = {
     // Demande au model de recupérer toutes les campagnes
     getAllCampaign: function(req, res){
@@ -12,7 +11,6 @@ const campaignController = {
 
         // On utilise la fonction getAllCampaign() pour récupérer toutes les campagnes
         var campaignPromise = campaign.getAllCampaign(); 
-
 
         // On utilise les promises (retournés par la fonction) pour générer les cas d'erreur
         campaignPromise

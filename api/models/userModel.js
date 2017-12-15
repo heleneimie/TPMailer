@@ -49,12 +49,9 @@ class UserModel {
                     //on rejette la promise
                     reject(error);
                 }
-        
-                user.id = results[0].id;
-                user.password = results[0].password;
                 
                 //on la resolve
-                resolve(user);
+                resolve(results[0]);
             });
         }); 
     };
